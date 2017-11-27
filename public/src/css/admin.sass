@@ -1,0 +1,483 @@
+$sol:#303641
+$link:#aaabae
+$border:rgba(69, 74, 84, 0.7)
+
+
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+a
+  text-decoration: none
+  &:focus,
+  &:active,
+  &:visited,
+  &:link
+    color: $link
+
+
+body
+  display: flex
+  justify-content: flex-start
+  align-items: flex-start
+  #solpanel
+    width: 300px
+    min-height: 100vh
+    background-color: $sol
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: center
+    #logo
+      font-size: 25px
+      font-weight: 800
+      color: white
+      padding: 15px 0
+      display: flex
+      justify-content: space-between
+      align-items: center
+      a
+        text-decoration: none
+        color: white!important
+    #menyu
+      margin-top: 30px
+      width: 100%
+      li
+        width: 100%
+        border-bottom: 1px solid $border
+        font-size: 14px
+        a
+          display: block
+          width: 100%
+          color: $link
+          text-decoration: none
+          padding: 10px 20px
+          font-weight: 600
+          transition: .2s ease-in-out
+          &:hover
+            background-color: rgba(69, 74, 84, 0.3)
+            color: #fff
+          i
+            margin-right: 8px
+  #sagpanel
+    width: calc(100% - 300px)
+    padding: 0 15px
+    height: 100vh
+    overflow: auto
+    #basliq
+      padding: 14px 30px
+      border-bottom: 1px solid #eee
+      display: flex
+      justify-content: space-between
+      align-items: center
+      height: 70px
+      a
+        color: $sol
+        display: flex
+        align-items: center
+        text-decoration: none
+        font-weight: 600
+        cursor: pointer
+        i
+          font-size: 25px
+          margin-right: 5px
+          position: relative
+          top: 1px
+      a:nth-of-type(2)
+        i
+          font-size: 18px
+
+
+#hamburgermenyusu
+  display: none
+  flex-direction: column
+  justify-content: flex-start
+  align-items: center
+  width: 30px
+
+  span
+    display: block
+    background-color: white
+    width: 100%
+    height: 5px
+    margin-bottom: 4px
+    &:last-of-type
+      margin-bottom: 0
+
+@media (max-width: 768px)
+  body
+    flex-direction: column
+    align-items: flex-start
+  #solpanel
+    width: 100% !important
+    min-height: 67px!important
+    #logo
+      padding-left: 20px!important
+      padding-right: 20px!important
+      width: 100%
+  #menyu
+    margin: 0!important
+    display: none
+  #hamburgermenyusu
+    display: flex
+  #sagpanel
+    width: 100% !important
+
+
+//====================
+//
+//  Postlara bax
+//
+//====================
+
+$elaveet:#f56954
+$elaveet-hover:#f4543c
+
+$red:#a11c1c
+$red-hover:#821717
+
+$sol-hover:#373C46
+
+$mavi:dodgerblue
+$mavi-hover:deepskyblue
+
+#post-bax
+  padding-top: 20px
+  table
+    font-size: 13px
+    th
+      text-align: center
+    td
+      vertical-align: middle
+      text-align: center
+    button#deyisdir
+      padding: 2px 8px
+      font-size: 16px
+      background-color: $sol
+      color: white
+      border: 1px solid transparent
+      border-radius: 4px
+      outline: none
+      cursor: pointer
+      transition: .2s ease-in-out
+      &:hover
+        background-color: $sol-hover
+        color: #fff
+    button#sil
+      padding: 2px 8px
+      font-size: 16px
+      background-color: $red
+      color: white
+      border: 1px solid transparent
+      border-radius: 4px
+      outline: none
+      cursor: pointer
+      transition: .2s ease-in-out
+      &:hover
+        background-color: $red-hover
+        color: #fff
+    button#goster
+      padding: 2px 8px
+      font-size: 16px
+      background-color: $mavi
+      color: white
+      border: 1px solid transparent
+      border-radius: 4px
+      outline: none
+      cursor: pointer
+      transition: .2s ease-in-out
+      &:hover
+        background-color: $mavi-hover
+        color: #fff
+
+  >a button
+    padding: 8px
+    font-size: 16px
+    background-color: $elaveet
+    color: white
+    border: 1px solid transparent
+    border-radius: 4px
+    outline: none
+    cursor: pointer
+    margin-bottom: 20px
+    transition: .2s ease-in-out
+    &:hover
+      background-color: $elaveet-hover
+
+
+//====================
+//
+//  Yeni post
+//
+//====================
+
+#post-yeni
+  padding-top: 20px
+  label
+    font-weight: 600
+  button
+    font-weight: 600
+    margin-bottom: 25px
+    margin-top: 25px
+    cursor: pointer
+    width: 100%
+  .custom-file-control:lang(az)::before
+    content: "Seç"
+
+//====================
+//
+//  Postun deyisdirilmesi
+//
+//====================
+
+#post-edit
+  padding-top: 20px
+  label
+    font-weight: 600
+    button
+      margin-left: 5px
+      padding: 2px 8px
+      font-size: 16px
+      background-color: $sol
+      color: white
+      border: 1px solid transparent
+      border-radius: 4px
+      outline: none
+      cursor: pointer
+      transition: .2s ease-in-out
+      &:hover
+        background-color: $sol-hover
+        color: #fff
+  button[type=submit]
+    font-weight: 600
+    margin-bottom: 25px
+    margin-top: 25px
+    cursor: pointer
+    width: 100%
+  .custom-file-control:lang(az)::before
+    content: "Seç"
+
+//====================
+//
+//  Sehifelere bax
+//
+//====================
+
+.sehife-bax
+  padding-top: 20px
+  >a button
+    padding: 8px
+    font-size: 16px
+    background-color: $elaveet
+    color: white
+    border: 1px solid transparent
+    border-radius: 4px
+    outline: none
+    cursor: pointer
+    margin-bottom: 20px
+    transition: .2s ease-in-out
+    &:hover
+      background-color: $elaveet-hover
+  table
+    font-size: 13px
+    th
+      text-align: center
+    td
+      vertical-align: middle
+      text-align: center
+    button#deyisdir
+      padding: 2px 8px
+      font-size: 16px
+      background-color: $sol
+      color: white
+      border: 1px solid transparent
+      border-radius: 4px
+      outline: none
+      cursor: pointer
+      transition: .2s ease-in-out
+      &:hover
+        background-color: $sol-hover
+        color: #fff
+    button#sil
+      padding: 2px 8px
+      font-size: 16px
+      background-color: $red
+      color: white
+      border: 1px solid transparent
+      border-radius: 4px
+      outline: none
+      cursor: pointer
+      transition: .2s ease-in-out
+      &:hover
+        background-color: $red-hover
+        color: #fff
+    button#goster
+      padding: 2px 8px
+      font-size: 16px
+      background-color: $mavi
+      color: white
+      border: 1px solid transparent
+      border-radius: 4px
+      outline: none
+      cursor: pointer
+      transition: .2s ease-in-out
+      &:hover
+        background-color: $mavi-hover
+        color: #fff
+
+
+//====================
+//
+//  Sehife yarat
+//
+//====================
+
+.sehife-create
+  padding-top: 20px
+  label
+    font-weight: 600
+  button[type=submit]
+    font-weight: 600
+    margin-bottom: 25px
+    margin-top: 25px
+    cursor: pointer
+    width: 100%
+  .custom-file-control:lang(az)::before
+    content: "Seç"
+
+//====================
+//
+//  Sehife edit
+//
+//====================
+
+.sehife-edit
+  padding-top: 20px
+  label
+    font-weight: 600
+    button
+      margin-left: 5px
+      padding: 2px 8px
+      font-size: 16px
+      background-color: $sol
+      color: white
+      border: 1px solid transparent
+      border-radius: 4px
+      outline: none
+      cursor: pointer
+      transition: .2s ease-in-out
+      &:hover
+        background-color: $sol-hover
+        color: #fff
+    .custom-file-control:lang(az)::before
+      content: "Seç"
+  button[type=submit]
+    font-weight: 600
+    margin-bottom: 25px
+    margin-top: 25px
+    cursor: pointer
+    width: 100%
+
+
+//====================
+//
+//  admin/istifadeciler
+//
+//====================
+
+
+$red:#a11c1c
+$red-hover:#821717
+
+$sol-hover:#373C46
+
+#istifadeciler
+  padding-top: 20px
+  table
+    font-size: 13px
+    th
+      text-align: center
+    td
+      vertical-align: middle
+      text-align: center
+    button#deyisdir
+      padding: 2px 8px
+      font-size: 16px
+      background-color: $sol
+      color: white
+      border: 1px solid transparent
+      border-radius: 4px
+      outline: none
+      cursor: pointer
+      transition: .2s ease-in-out
+      &:hover
+        background-color: $sol-hover
+        color: #fff
+    button#sil
+      padding: 2px 8px
+      font-size: 16px
+      background-color: $red
+      color: white
+      border: 1px solid transparent
+      border-radius: 4px
+      outline: none
+      cursor: pointer
+      transition: .2s ease-in-out
+      &:hover
+        background-color: $red-hover
+        color: #fff
+
+//====================
+//
+//  admin/reyler
+//
+//====================
+
+#reyler
+  padding-top: 20px
+  table
+    font-size: 13px
+    th
+      text-align: center
+    td
+      vertical-align: middle
+      text-align: center
+    button#goster
+      padding: 2px 8px
+      font-size: 16px
+      background-color: $mavi
+      color: white
+      border: 1px solid transparent
+      border-radius: 4px
+      outline: none
+      cursor: pointer
+      transition: .2s ease-in-out
+      &:hover
+        background-color: $mavi-hover
+        color: #fff
+    button#sil
+      padding: 2px 8px
+      font-size: 16px
+      background-color: $red
+      color: white
+      border: 1px solid transparent
+      border-radius: 4px
+      outline: none
+      cursor: pointer
+      transition: .2s ease-in-out
+      &:hover
+        background-color: $red-hover
+        color: #fff
+
+@media (max-width: 380px)
+  body
+    #sagpanel
+      #basliq
+        padding-left: 0
+        padding-right: 0
+        section:nth-of-type(1)
+          a:nth-of-type(2)
+            margin-left: 0
+

@@ -1,0 +1,402 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none; }
+  a:focus, a:active, a:visited, a:link {
+    color: #aaabae; }
+
+body {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start; }
+  body #solpanel {
+    width: 300px;
+    min-height: 100vh;
+    background-color: #303641;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center; }
+    body #solpanel #logo {
+      font-size: 25px;
+      font-weight: 800;
+      color: white;
+      padding: 15px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      body #solpanel #logo a {
+        text-decoration: none;
+        color: white !important; }
+    body #solpanel #menyu {
+      margin-top: 30px;
+      width: 100%; }
+      body #solpanel #menyu li {
+        width: 100%;
+        border-bottom: 1px solid rgba(69, 74, 84, 0.7);
+        font-size: 14px; }
+        body #solpanel #menyu li a {
+          display: block;
+          width: 100%;
+          color: #aaabae;
+          text-decoration: none;
+          padding: 10px 20px;
+          font-weight: 600;
+          transition: 0.2s ease-in-out; }
+          body #solpanel #menyu li a:hover {
+            background-color: rgba(69, 74, 84, 0.3);
+            color: #fff; }
+          body #solpanel #menyu li a i {
+            margin-right: 8px; }
+  body #sagpanel {
+    width: calc(100% - 300px);
+    padding: 0 15px;
+    height: 100vh;
+    overflow: auto; }
+    body #sagpanel #basliq {
+      padding: 14px 30px;
+      border-bottom: 1px solid #eee;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 70px; }
+      body #sagpanel #basliq a {
+        color: #303641;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        font-weight: 600;
+        cursor: pointer; }
+        body #sagpanel #basliq a i {
+          font-size: 25px;
+          margin-right: 5px;
+          position: relative;
+          top: 1px; }
+      body #sagpanel #basliq a:nth-of-type(2) i {
+        font-size: 18px; }
+
+#hamburgermenyusu {
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 30px; }
+  #hamburgermenyusu span {
+    display: block;
+    background-color: white;
+    width: 100%;
+    height: 5px;
+    margin-bottom: 4px; }
+    #hamburgermenyusu span:last-of-type {
+      margin-bottom: 0; }
+
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+    align-items: flex-start; }
+
+  #solpanel {
+    width: 100% !important;
+    min-height: 67px !important; }
+    #solpanel #logo {
+      padding-left: 20px !important;
+      padding-right: 20px !important;
+      width: 100%; }
+
+  #menyu {
+    margin: 0 !important;
+    display: none; }
+
+  #hamburgermenyusu {
+    display: flex; }
+
+  #sagpanel {
+    width: 100% !important; } }
+#post-bax {
+  padding-top: 20px; }
+  #post-bax table {
+    font-size: 13px; }
+    #post-bax table th {
+      text-align: center; }
+    #post-bax table td {
+      vertical-align: middle;
+      text-align: center; }
+    #post-bax table button#deyisdir {
+      padding: 2px 8px;
+      font-size: 16px;
+      background-color: #303641;
+      color: white;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      outline: none;
+      cursor: pointer;
+      transition: 0.2s ease-in-out; }
+      #post-bax table button#deyisdir:hover {
+        background-color: #373C46;
+        color: #fff; }
+    #post-bax table button#sil {
+      padding: 2px 8px;
+      font-size: 16px;
+      background-color: #a11c1c;
+      color: white;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      outline: none;
+      cursor: pointer;
+      transition: 0.2s ease-in-out; }
+      #post-bax table button#sil:hover {
+        background-color: #821717;
+        color: #fff; }
+    #post-bax table button#goster {
+      padding: 2px 8px;
+      font-size: 16px;
+      background-color: dodgerblue;
+      color: white;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      outline: none;
+      cursor: pointer;
+      transition: 0.2s ease-in-out; }
+      #post-bax table button#goster:hover {
+        background-color: deepskyblue;
+        color: #fff; }
+  #post-bax > a button {
+    padding: 8px;
+    font-size: 16px;
+    background-color: #f56954;
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: 0.2s ease-in-out; }
+    #post-bax > a button:hover {
+      background-color: #f4543c; }
+
+#post-yeni {
+  padding-top: 20px; }
+  #post-yeni label {
+    font-weight: 600; }
+  #post-yeni button {
+    font-weight: 600;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    cursor: pointer;
+    width: 100%; }
+  #post-yeni .custom-file-control:lang(az)::before {
+    content: "Seç"; }
+
+#post-edit {
+  padding-top: 20px; }
+  #post-edit label {
+    font-weight: 600; }
+    #post-edit label button {
+      margin-left: 5px;
+      padding: 2px 8px;
+      font-size: 16px;
+      background-color: #303641;
+      color: white;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      outline: none;
+      cursor: pointer;
+      transition: 0.2s ease-in-out; }
+      #post-edit label button:hover {
+        background-color: #373C46;
+        color: #fff; }
+  #post-edit button[type=submit] {
+    font-weight: 600;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    cursor: pointer;
+    width: 100%; }
+  #post-edit .custom-file-control:lang(az)::before {
+    content: "Seç"; }
+
+.sehife-bax {
+  padding-top: 20px; }
+  .sehife-bax > a button {
+    padding: 8px;
+    font-size: 16px;
+    background-color: #f56954;
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: 0.2s ease-in-out; }
+    .sehife-bax > a button:hover {
+      background-color: #f4543c; }
+  .sehife-bax table {
+    font-size: 13px; }
+    .sehife-bax table th {
+      text-align: center; }
+    .sehife-bax table td {
+      vertical-align: middle;
+      text-align: center; }
+    .sehife-bax table button#deyisdir {
+      padding: 2px 8px;
+      font-size: 16px;
+      background-color: #303641;
+      color: white;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      outline: none;
+      cursor: pointer;
+      transition: 0.2s ease-in-out; }
+      .sehife-bax table button#deyisdir:hover {
+        background-color: #373C46;
+        color: #fff; }
+    .sehife-bax table button#sil {
+      padding: 2px 8px;
+      font-size: 16px;
+      background-color: #a11c1c;
+      color: white;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      outline: none;
+      cursor: pointer;
+      transition: 0.2s ease-in-out; }
+      .sehife-bax table button#sil:hover {
+        background-color: #821717;
+        color: #fff; }
+    .sehife-bax table button#goster {
+      padding: 2px 8px;
+      font-size: 16px;
+      background-color: dodgerblue;
+      color: white;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      outline: none;
+      cursor: pointer;
+      transition: 0.2s ease-in-out; }
+      .sehife-bax table button#goster:hover {
+        background-color: deepskyblue;
+        color: #fff; }
+
+.sehife-create {
+  padding-top: 20px; }
+  .sehife-create label {
+    font-weight: 600; }
+  .sehife-create button[type=submit] {
+    font-weight: 600;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    cursor: pointer;
+    width: 100%; }
+  .sehife-create .custom-file-control:lang(az)::before {
+    content: "Seç"; }
+
+.sehife-edit {
+  padding-top: 20px; }
+  .sehife-edit label {
+    font-weight: 600; }
+    .sehife-edit label button {
+      margin-left: 5px;
+      padding: 2px 8px;
+      font-size: 16px;
+      background-color: #303641;
+      color: white;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      outline: none;
+      cursor: pointer;
+      transition: 0.2s ease-in-out; }
+      .sehife-edit label button:hover {
+        background-color: #373C46;
+        color: #fff; }
+    .sehife-edit label .custom-file-control:lang(az)::before {
+      content: "Seç"; }
+  .sehife-edit button[type=submit] {
+    font-weight: 600;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    cursor: pointer;
+    width: 100%; }
+
+#istifadeciler {
+  padding-top: 20px; }
+  #istifadeciler table {
+    font-size: 13px; }
+    #istifadeciler table th {
+      text-align: center; }
+    #istifadeciler table td {
+      vertical-align: middle;
+      text-align: center; }
+    #istifadeciler table button#deyisdir {
+      padding: 2px 8px;
+      font-size: 16px;
+      background-color: #303641;
+      color: white;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      outline: none;
+      cursor: pointer;
+      transition: 0.2s ease-in-out; }
+      #istifadeciler table button#deyisdir:hover {
+        background-color: #373C46;
+        color: #fff; }
+    #istifadeciler table button#sil {
+      padding: 2px 8px;
+      font-size: 16px;
+      background-color: #a11c1c;
+      color: white;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      outline: none;
+      cursor: pointer;
+      transition: 0.2s ease-in-out; }
+      #istifadeciler table button#sil:hover {
+        background-color: #821717;
+        color: #fff; }
+
+#reyler {
+  padding-top: 20px; }
+  #reyler table {
+    font-size: 13px; }
+    #reyler table th {
+      text-align: center; }
+    #reyler table td {
+      vertical-align: middle;
+      text-align: center; }
+    #reyler table button#goster {
+      padding: 2px 8px;
+      font-size: 16px;
+      background-color: dodgerblue;
+      color: white;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      outline: none;
+      cursor: pointer;
+      transition: 0.2s ease-in-out; }
+      #reyler table button#goster:hover {
+        background-color: deepskyblue;
+        color: #fff; }
+    #reyler table button#sil {
+      padding: 2px 8px;
+      font-size: 16px;
+      background-color: #a11c1c;
+      color: white;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      outline: none;
+      cursor: pointer;
+      transition: 0.2s ease-in-out; }
+      #reyler table button#sil:hover {
+        background-color: #821717;
+        color: #fff; }
+
+@media (max-width: 380px) {
+  body #sagpanel #basliq {
+    padding-left: 0;
+    padding-right: 0; }
+    body #sagpanel #basliq section:nth-of-type(1) a:nth-of-type(2) {
+      margin-left: 0; } }
+
+/*# sourceMappingURL=admin.css.map */
